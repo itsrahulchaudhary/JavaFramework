@@ -6,7 +6,7 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 
 @Entity
-@Table(name="stu")
+@Table(name="student")
 public class Student {
 	
 	@Id
@@ -43,7 +43,7 @@ public class Student {
 	}
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", name=" + name + ", city=" + city + "]";
+		return this.id+" : "+ this.name+" : "+this.city;
 	}
 	
 	

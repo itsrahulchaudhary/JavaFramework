@@ -12,13 +12,14 @@ public class Student2 {
 	private int id;
 	private String name;
 	private String city;
-	private Certificate certi;
+	private Certificate certificate;
 	
-	public Certificate getCerti() {
-		return certi;
+	 
+	public Certificate getCertificate() {
+		return certificate;
 	}
-	public void setCerti(Certificate certi) {
-		this.certi = certi;
+	public void setCertificate(Certificate certificate) {
+		this.certificate = certificate;
 	}
 	public Student2(int id, String name, String city) {
 		super();

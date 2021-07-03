@@ -1,8 +1,9 @@
-package com.hibernateframework.mapping.one2one;
+package com.hibernateframework.one2one;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -12,6 +13,16 @@ public class Answer {
 	@Id
 	private int answerId;
 	private String answer;
+	
+	@OneToOne(mappedBy = "answer")
+	private Question question;
+	
+	public Question getQuestion() {
+		return question;
+	}
+	public void setQuestion(Question question) {
+		this.question = question;
+	}
 	public Answer() {
 		super();
 		// TODO Auto-generated constructor stub
