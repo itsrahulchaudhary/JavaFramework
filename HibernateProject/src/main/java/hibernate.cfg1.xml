@@ -11,13 +11,15 @@
 		<property name="hibernate.hbm2ddl.auto">create</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="show_sql">true</property>
-	    <property name="format_sql">false</property>  
-	    <mapping class="com.hibernateframework.Student" />  
-	    <mapping class="com.hibernateframework.Address" />  
-	    <mapping class="com.hibernateframework.Student2" />  
-	    <mapping class="com.hibernateframework.Student" />  
-	    <mapping class="com.hibernateframework.one2one.Question" />  
- 	    <mapping class="com.hibernateframework.one2one.Answer" />  
- 
+		<property name="format_sql">false</property>
+		<mapping class="com.hibernateframework.Student" />
+		<mapping class="com.hibernateframework.Address" />
+		<mapping class="com.hibernateframework.Student2" />
+		<mapping class="com.hibernateframework.Student" />
+		<!-- <mapping class="com.hibernateframework.one2one.Question" /> <mapping 
+			class="com.hibernateframework.one2one.Answer" /> -->
+
+		<mapping class="com.hibernateframework.one2many.Question" />
+		<mapping class="com.hibernateframework.one2many.Answer" />
 	</session-factory>
 </hibernate-configuration>  
