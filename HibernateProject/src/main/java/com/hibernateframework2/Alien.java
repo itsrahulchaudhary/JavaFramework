@@ -5,8 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name="alien_tab")
+//@Entity
+//@Table(name="alien_tab")
 public class Alien {
 	@Id
 	private int aid;

@@ -2,7 +2,9 @@ package com.hibernateframework.one2many;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -16,7 +18,7 @@ public class Question {
 	private int questionId;
 	private String question;
 
-	@OneToMany(mappedBy = "question")
+	@OneToMany(mappedBy = "question", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<Answer> answers;
 
 	public List<Answer> getAnswers() {

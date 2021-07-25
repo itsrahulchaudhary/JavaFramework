@@ -8,10 +8,13 @@
 		<property name="connection.url">jdbc:mysql://localhost:3306/hibernateDB?useSSL=false</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">root</property>
-		<property name="hibernate.hbm2ddl.auto">create</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-		<property name="show_sql">true</property>
-		<property name="format_sql">false</property>
+		<property name="show_sql">false</property>
+		<property name="format_sql">true</property>
+		<property name="cache.use_second_level_cache">true</property>   
+		<property name="cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+	    <property name="hibernate.generate_statistics">true</property>
 		<mapping class="com.hibernateframework.Student" />
 		<mapping class="com.hibernateframework.Address" />
 		<mapping class="com.hibernateframework.Student2" />
@@ -21,5 +24,9 @@
 
 		<mapping class="com.hibernateframework.one2many.Question" />
 		<mapping class="com.hibernateframework.one2many.Answer" />
+		<mapping class="com.hibernateframework.many2many.Employee" />
+		<mapping class="com.hibernateframework.many2many.Project" />
+		<mapping class="com.hibernateframework.hql.StudentDetail" />
+		<mapping resource="com/hibernateframework/mapping/xml/Person.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>  
